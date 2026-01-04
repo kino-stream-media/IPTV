@@ -1,155 +1,99 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV PLAYLIST С КАНАЛАМИ</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #f4f4f4;
-            background-color: #121212;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #1e1e1e;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        h1 {
-            color: #00a8ff;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #00d2ff;
-            font-size: 1.2em;
-            margin-top: 25px;
-        }
-        .tg-link {
-            display: block;
-            background: #0088cc;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        .tg-link:hover {
-            background: #0099e6;
-        }
-        .playlist-box {
-            background: #2d2d2d;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border-left: 5px solid #00a8ff;
-        }
-        .url-text {
-            word-break: break-all;
-            font-family: monospace;
-            color: #00ff88;
-            background: #000;
-            padding: 10px;
-            display: block;
-            margin-top: 5px;
-            border-radius: 4px;
-        }
-        .copy-btn {
-            cursor: pointer;
-            background: #444;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            margin-top: 10px;
-            border-radius: 4px;
-            font-size: 0.8em;
-        }
-        .copy-btn:hover {
-            background: #555;
-        }
-        .footer-info {
-            font-size: 0.9em;
-            color: #aaa;
-            border-top: 1px solid #333;
-            margin-top: 30px;
-            padding-top: 20px;
-        }
-        .app-link {
-            color: #ff9f43;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .bank-info {
-            background: #2c3e50;
-                        padding: 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
+# 🎬 IPTV PLAYLIST С КАНАЛАМИ
 
-<div class="container">
-    <h1>IPTV PLAYLIST С КАНАЛАМИ</h1>
-    
-    <p>Открытый IPTV плейлист с каналами. Составляются преимущественно для граждан РФ и Беларуси.</p>
+<div align="center">
 
-    <a href="https://t.me/kino_stream_chat" class="tg-link" target="_blank">Наш чат в Telegram: Новости и изменения</a>
+![IPTV](https://img.shields.io/badge/IPTV-Плейлист-blue)
+![Каналы](https://img.shields.io/badge/Каналы-РФ/Беларусь-red)
+![Обновляется](https://img.shields.io/badge/Обновляется-Регулярно-green)
+![Формат](https://img.shields.io/badge/Формат-m3u-orange)
 
-    <h2>Поддерживаемые плееры</h2>
-    <p>Проверяется на следующих проигрывателях: <strong>SMPlayer, Celluloid, VLC, TELEVIZO и Hypnotix</strong>. Рекомендуем использовать <strong>TELEVIZO</strong>.</p>
-
-    <h2>Подключение плейлиста</h2>
-    <p>Скопируйте ссылку ниже и вставьте в поле для ввода адреса вашего проигрывателя.</p>
-    
-    <div class="playlist-box">
-        <strong>Основной плейлист:</strong>
-        <span class="url-text" id="url1">https://kino-stream-media.github.io/IPTV/iptvru.m3u</span>
-        <button class="copy-btn" onclick="copyToClipboard('url1')">Копировать ссылку</button>
-    </div>
-
-    <div class="playlist-box">
-        <strong>Второй вариант:</strong>
-        <span class="url-text" id="url2">https://kino-stream.online/iptvru.m3u</span>
-        <button class="copy-btn" onclick="copyToClipboard('url2')">Копировать ссылку</button>
-    </div>
-
-    <h2>Инструкция (на примере VLC)</h2>
-    <p>Выберите: “Медиа” -> “Открыть URL…” (Ctrl+N) и вставьте скопированную ссылку. Нажмите “Воспроизвести”.</p>
-    <p><i>Примечание: Сторонние значки и программа передач уже встроены в плейлист.</i></p>
-
-    <div class="footer-info">
-        <h2>Приложение и спец. плейлист</h2>
-        <p>Наше IPTV приложение KINO STREAM MEDIA: <a href="https://www.rustore.ru/catalog/app/com.kinostream.media" class="app-link" target="_blank">Скачать в RuStore</a></p>
-        <p>Плейлист приложения: <code id="url3" style="color:#00ff88">https://kino-stream.media/player.m3u8</code></p>
-        <p>EPG приложения: <code id="url3" style="color:#00ff88">https://kino-stream.media/player.xml</code></p>
-        
-        <h2>Благодарность</h2>
-        <p>Мы всегда рады вашей поддержке:</p>
-        <a href="https://dalink.to/kino_stream_media" class="app-link" target="_blank">Поддержать проект (Dalink)</a>
-        <div class="bank-info">
-            OZON БАНК: <strong>2204 3204 9686 6346</strong>
-        </div>
-    </div>
 </div>
 
-<script>
-    function copyToClipboard(id) {
-        const text = document.getElementById(id).innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            alert("Ссылка скопирована!");
-        });
-    }
-</script>
+## 📋 Описание
+Открытый IPTV плейлист с каналами для граждан РФ и Беларуси.
 
-</body>
-</html>
+## 📢 Телеграм-чат
+Для новостей и обновлений:  
+[![Telegram Chat](https://img.shields.io/badge/Telegram-Чат_обновлений-blue?logo=telegram)](https://t.me/kino_stream_chat)
+
+## 🎮 Поддерживаемые плееры
+
+<div align="center">
+
+| Плеер | Статус | Рекомендация |
+|-------|--------|--------------|
+| **TELEVIZO** | ✅ Проверено | ⭐ **Рекомендуем** |
+| VLC Media Player | ✅ Проверено | ✅ |
+| SMPlayer | ✅ Проверено | ✅ |
+| Celluloid | ✅ Проверено | ✅ |
+| Hypnotix | ✅ Проверено | ✅ |
+
+</div>
+
+## 🔧 Подключение плейлиста
+
+### Быстрый способ:
+1. **Скопируйте** ссылку на плейлист
+2. **Вставьте** в поле URL вашего плеера
+3. **Наслаждайтесь** просмотром
+
+### Для VLC:
+```
+Медиа → Открыть URL… (Ctrl+N) → Вставить ссылку → Воспроизвести
+```
+
+> ⚠️ **Внимание:** Сторонние программы могут не отображать иконки и программу передач, так как эта информация уже встроена в плейлист.
+
+## 🔗 Ссылки на плейлисты
+
+### Основной плейлист:
+
+```bash
+https://kino-stream-media.github.io/IPTV/iptvru.m3u
+```
+
+[![Основной плейлист](https://img.shields.io/badge/Скачать-Основной_плейлист-brightgreen?style=for-the-badge)](https://kino-stream-media.github.io/IPTV/iptvru.m3u)
+
+### Альтернативная ссылка:
+
+```bash
+https://kino-stream.online/iptvru.m3u
+```
+
+[![Альтернатива](https://img.shields.io/badge/Скачать-Альтернативная_ссылка-yellow?style=for-the-badge)](https://kino-stream.online/iptvru.m3u)
+
+## 📱 Наше приложение
+
+<div align="center">
+
+[![RuStore](https://img.shields.io/badge/Скачать_RuStore-KINO_STREAM_MEDIA-F56C2D?style=for-the-badge&logo=googledrive&logoColor=white)](https://www.rustore.ru/catalog/app/com.kinostream.media)
+
+**Плейлист приложения:**
+```
+https://kino-stream.media/player.m3u8
+```
+
+</div>
+
+## 💝 Поддержка проекта
+
+Мы ценим вашу поддержку! Вы можете помочь проекту:
+
+### 💳 Банковская карта (OZON БАНК):
+```
+2204 3204 9686 6346
+```
+
+### 🌐 Онлайн-донат:
+[![Поддержать проект](https://img.shields.io/badge/Поддержать_проект-Донат-FF6B6B?style=for-the-badge)](https://dalink.to/kino_stream_media)
+
+---
+
+<div align="center">
+
+### ⭐ Если вам нравится наш плейлист, поделитесь им с друзьями!
+
+**Обновления выходят регулярно — следите за нашим Telegram-чатом!**
+
+</div>
+```
