@@ -70,11 +70,11 @@ https://kino-stream.online/iptvru.m3u
 
 **Плейлист приложения:**
 ```
-https://kino-stream.media/player.m3u8
+https://kino-stream.online/player.m3u8
 ```
 **EPG приложения:**
 ```
-https://kino-stream.media/player.xml
+https://kino-stream.online/player.xml
 ```
 
 </div>
