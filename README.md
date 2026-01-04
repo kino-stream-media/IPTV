@@ -72,6 +72,10 @@ https://kino-stream.online/iptvru.m3u
 ```
 https://kino-stream.media/player.m3u8
 ```
+**EPG приложения:**
+```
+https://kino-stream.media/player.xml
+```
 
 </div>
 
